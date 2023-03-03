@@ -335,3 +335,34 @@ button {
     margin-left: -12px;
     margin-top: 8px;
 }
+
+
+/* contact */
+#contact {
+    background-color: var(--color-pink);
+}
+
+.contact__title,
+.contact__email {
+    color: var(--color-white);
+}
+
+.contact__title {
+    margin: 32px 0;
+}
+
+.contact__links {
+    margin: 24px 0;
+    font-size: var(--font-large);
+}
+
+.contact__links i:hover {
+    transform: scale(1.1);
+    color: var(--color-yellow);
+}
+
+.contact__links i {
+    transition: all var(--animation-duration) ease-in;
+}
+
+
