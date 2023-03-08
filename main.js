@@ -4,8 +4,8 @@ const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-    console.log(navbarHeight);
+    // console.log(window.scrollY);
+    // console.log(navbarHeight);
     if(window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
     } else {
@@ -22,10 +22,19 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
     console.log(event.target.dataset.link)
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: 'smooth'});
+    scrollIntoView(link);
 });
 
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', (event) => {
+    console.log(event.target.dataset.link);
+    scrollIntoView('#contact')
+});
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+}
 
 
 
